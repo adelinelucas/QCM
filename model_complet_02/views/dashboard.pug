@@ -1,0 +1,12 @@
+extends layouts/frontend
+
+block content
+    .ui.middle.aligned.center.aligned.grid
+      .column
+        .ui.message.header
+            if connectedUser
+                p Welcome Loggued #{connectedUser.firstName} -  #{connectedUser.lastName} !
+            else 
+                p Welcome Loggued !
+            br 
+            a(href="/logout") Logout
